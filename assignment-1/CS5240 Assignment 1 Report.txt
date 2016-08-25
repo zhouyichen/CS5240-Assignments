@@ -1,0 +1,10 @@
+Sum-squared error of linear-fit-1.py: 64.8115311476, it is the same as that computed by lstsq
+
+Sum-squared error of linear-fit-2.py: 2.74419888251
+
+Sum-squared error of quad-fit-1.py: 1.08818828795
+
+The revised equation use the following terms: y^2, xy, yz, x, y, z, 1
+The three terms that were removed are: x^2, z^2, xz
+
+Sum-squared error of quad-fit-2.py: 1.19587234952
