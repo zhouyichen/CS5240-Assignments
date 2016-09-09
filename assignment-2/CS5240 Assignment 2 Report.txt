@@ -2,8 +2,70 @@ CS5240 Assignment 2 Report
 Zhou Yichen 
 A0113598X
 
+2.5
 eigenvalues = [  2.44848869e-01   1.72491950e-01   1.57666563e-01   1.30674778e-01
    9.46820627e-02   6.30331515e-02   2.20519511e-02   1.76973092e-02
    6.57513328e-03   1.29895718e-04   2.59805093e-04]
 
+2.6
 sorted_indices = [ 9 10  8  7  6  5  4  3  2  1  0]
+
+3.1
+total_variance = 0.910111468667
+
+3.2
+l = 1 and R(l) = 0.26903173664
+l = 2 and R(l) = 0.458560114049
+l = 3 and R(l) = 0.631798853246
+l = 4 and R(l) = 0.775379922549
+l = 5 and R(l) = 0.879413401973
+l = 6 and R(l) = 0.948672117698
+l = 7 and R(l) = 0.972902062985
+l = 8 and R(l) = 0.992347273568
+l = 9 and R(l) = 0.999571809802
+l = 10 and R(l) = 0.999857274936
+l = 11 and R(l) = 1.0
+
+3.6
+x =
+[[ 0.21]
+ [ 0.72]
+ [ 0.06]
+ [ 0.36]
+ [-0.12]
+ [ 0.04]
+ [ 0.  ]
+ [ 0.46]
+ [ 0.27]
+ [ 0.59]
+ [ 0.7 ]]
+y =
+[[-0.40361439]
+ [-0.42612221]
+ [ 0.01272625]
+ [ 0.36863991]
+ [ 0.40168507]
+ [ 0.40896213]
+ [-0.45298356]
+ [-0.11688271]
+ [ 0.36777104]
+ [-0.21409704]
+ [-0.43643627]]
+
+
+ 3.7
+ y_hat is the same as y truncated to the first l components
+
+ 3.10
+l = 1  and sum-squared error E = 19.9578779915
+l = 2  and sum-squared error E = 14.7831194939
+l = 3  and sum-squared error E = 10.0531225931
+l = 4  and sum-squared error E = 6.13287925744
+l = 5  and sum-squared error E = 3.29241737495
+l = 6  and sum-squared error E = 1.40142283037
+l = 7  and sum-squared error E = 0.739864297642
+l = 8  and sum-squared error E = 0.208945022778
+l = 9  and sum-squared error E = 0.01169102431
+l = 10  and sum-squared error E = 0.00389687152811
+l = 11  and sum-squared error E = 1.07712286392e-28
+ 
