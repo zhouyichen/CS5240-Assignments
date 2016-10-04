@@ -17,12 +17,12 @@ D = [xx, yy, zz]
 v = data[:,0] / 100
 
 a = np.ones(3)
-alpha = 5.207
+alpha = 5.739
 
 def get_diff(D, a):
 	total = np.zeros(v.shape)
 	for i in range(3):
-		sq = D[i] * D[i]
+		sq = D[i]
 		total += sq / (a[i] + sq)
 	return total - v
 
@@ -32,7 +32,7 @@ def get_gradient(D, a, diff):
 	'''
 	gradient = np.zeros(3)
 	for i in range(3):
-		sq = D[i] * D[i]
+		sq = D[i]
 		gradient[i] = 2 * np.sum(diff * (-sq / np.square(a[i] + sq)))
 	return gradient
 
@@ -57,9 +57,9 @@ output_file.write('Final sum squared error: ' + str(sum_squared_error) + '\n')
 # evaluation of alpha
 # results = []
 # for i in range(1000):
-# 	start = 1.0
+# 	start = 5.7
 # 	a = np.ones(3)
-# 	alpha = start + i / 100.0
+# 	alpha = start + i / 10000.0
 
 # 	for i in range(1, 201):
 # 		diff = get_diff(D, a)
