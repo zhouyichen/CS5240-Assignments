@@ -1,0 +1,826 @@
+CS5240 Assignment 2 Report
+Zhou Yichen 
+A0113598X
+
+Quadratic fitting with data scaling:
+	Data scaling factor for each column are division by:
+	100, 100000, 100, 10000 respectively
+
+	Step length: 0.03879
+
+	Initial a: [[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+	Iteration number: 1
+	Sum squared error: 0.0678715188338
+	Iteration number: 2
+	Sum squared error: 0.0630298217634
+	Iteration number: 3
+	Sum squared error: 0.0587110391185
+	Iteration number: 4
+	Sum squared error: 0.0548337005311
+	Iteration number: 5
+	Sum squared error: 0.0513315509408
+	Iteration number: 6
+	Sum squared error: 0.0481505313021
+	Iteration number: 7
+	Sum squared error: 0.0452463688967
+	Iteration number: 8
+	Sum squared error: 0.0425826535885
+	Iteration number: 9
+	Sum squared error: 0.0401293014774
+	Iteration number: 10
+	Sum squared error: 0.037861327421
+	Iteration number: 11
+	Sum squared error: 0.0357578638421
+	Iteration number: 12
+	Sum squared error: 0.0338013759445
+	Iteration number: 13
+	Sum squared error: 0.0319770335888
+	Iteration number: 14
+	Sum squared error: 0.0302722081453
+	Iteration number: 15
+	Sum squared error: 0.0286760690735
+	Iteration number: 16
+	Sum squared error: 0.0271792600986
+	Iteration number: 17
+	Sum squared error: 0.0257736389399
+	Iteration number: 18
+	Sum squared error: 0.0244520677998
+	Iteration number: 19
+	Sum squared error: 0.023208244412
+	Iteration number: 20
+	Sum squared error: 0.0220365655189
+	Iteration number: 21
+	Sum squared error: 0.0209320162885
+	Iteration number: 22
+	Sum squared error: 0.0198900805006
+	Iteration number: 23
+	Sum squared error: 0.0189066673711
+	Iteration number: 24
+	Sum squared error: 0.0179780517237
+	Iteration number: 25
+	Sum squared error: 0.0171008248761
+	Iteration number: 26
+	Sum squared error: 0.016271854145
+	Iteration number: 27
+	Sum squared error: 0.0154882492891
+	Iteration number: 28
+	Sum squared error: 0.0147473345527
+	Iteration number: 29
+	Sum squared error: 0.0140466252365
+	Iteration number: 30
+	Sum squared error: 0.0133838079379
+	Iteration number: 31
+	Sum squared error: 0.0127567237759
+	Iteration number: 32
+	Sum squared error: 0.0121633540475
+	Iteration number: 33
+	Sum squared error: 0.0116018078771
+	Iteration number: 34
+	Sum squared error: 0.0110703115014
+	Iteration number: 35
+	Sum squared error: 0.0105671989067
+	Iteration number: 36
+	Sum squared error: 0.0100909035874
+	Iteration number: 37
+	Sum squared error: 0.00963995124017
+	Iteration number: 38
+	Sum squared error: 0.00921295324454
+	Iteration number: 39
+	Sum squared error: 0.00880860080684
+	Iteration number: 40
+	Sum squared error: 0.00842565966932
+	Iteration number: 41
+	Sum squared error: 0.00806296530293
+	Iteration number: 42
+	Sum squared error: 0.00771941851783
+	Iteration number: 43
+	Sum squared error: 0.00739398143679
+	Iteration number: 44
+	Sum squared error: 0.00708567378653
+	Iteration number: 45
+	Sum squared error: 0.00679356946939
+	Iteration number: 46
+	Sum squared error: 0.006516793384
+	Iteration number: 47
+	Sum squared error: 0.0062545184687
+	Iteration number: 48
+	Sum squared error: 0.00600596294511
+	Iteration number: 49
+	Sum squared error: 0.00577038774318
+	Iteration number: 50
+	Sum squared error: 0.00554709409104
+	Iteration number: 51
+	Sum squared error: 0.00533542125579
+	Iteration number: 52
+	Sum squared error: 0.00513474442275
+	Iteration number: 53
+	Sum squared error: 0.00494447270247
+	Iteration number: 54
+	Sum squared error: 0.0047640472559
+	Iteration number: 55
+	Sum squared error: 0.00459293952923
+	Iteration number: 56
+	Sum squared error: 0.00443064959085
+	Iteration number: 57
+	Sum squared error: 0.00427670456348
+	Iteration number: 58
+	Sum squared error: 0.00413065714536
+	Iteration number: 59
+	Sum squared error: 0.00399208421471
+	Iteration number: 60
+	Sum squared error: 0.0038605855124
+	Iteration number: 61
+	Sum squared error: 0.00373578239795
+	Iteration number: 62
+	Sum squared error: 0.00361731667462
+	Iteration number: 63
+	Sum squared error: 0.00350484947927
+	Iteration number: 64
+	Sum squared error: 0.00339806023342
+	Iteration number: 65
+	Sum squared error: 0.00329664565194
+	Iteration number: 66
+	Sum squared error: 0.00320031880596
+	Iteration number: 67
+	Sum squared error: 0.00310880823707
+	Iteration number: 68
+	Sum squared error: 0.00302185711985
+	Iteration number: 69
+	Sum squared error: 0.00293922247004
+	Iteration number: 70
+	Sum squared error: 0.0028606743958
+	Iteration number: 71
+	Sum squared error: 0.00278599538973
+	Iteration number: 72
+	Sum squared error: 0.00271497965928
+	Iteration number: 73
+	Sum squared error: 0.00264743249355
+	Iteration number: 74
+	Sum squared error: 0.00258316966447
+	Iteration number: 75
+	Sum squared error: 0.0025220168604
+	Iteration number: 76
+	Sum squared error: 0.00246380915044
+	Iteration number: 77
+	Sum squared error: 0.00240839047777
+	Iteration number: 78
+	Sum squared error: 0.00235561318041
+	Iteration number: 79
+	Sum squared error: 0.00230533753796
+	Iteration number: 80
+	Sum squared error: 0.00225743134282
+	Iteration number: 81
+	Sum squared error: 0.00221176949466
+	Iteration number: 82
+	Sum squared error: 0.00216823361679
+	Iteration number: 83
+	Sum squared error: 0.00212671169332
+	Iteration number: 84
+	Sum squared error: 0.00208709772587
+	Iteration number: 85
+	Sum squared error: 0.00204929140895
+	Iteration number: 86
+	Sum squared error: 0.00201319782278
+	Iteration number: 87
+	Sum squared error: 0.00197872714281
+	Iteration number: 88
+	Sum squared error: 0.00194579436485
+	Iteration number: 89
+	Sum squared error: 0.00191431904514
+	Iteration number: 90
+	Sum squared error: 0.00188422505439
+	Iteration number: 91
+	Sum squared error: 0.00185544034518
+	Iteration number: 92
+	Sum squared error: 0.00182789673187
+	Iteration number: 93
+	Sum squared error: 0.00180152968245
+	Iteration number: 94
+	Sum squared error: 0.00177627812158
+	Iteration number: 95
+	Sum squared error: 0.0017520842443
+	Iteration number: 96
+	Sum squared error: 0.00172889333982
+	Iteration number: 97
+	Sum squared error: 0.00170665362479
+	Iteration number: 98
+	Sum squared error: 0.00168531608557
+	Iteration number: 99
+	Sum squared error: 0.00166483432908
+	Iteration number: 100
+	Sum squared error: 0.00164516444162
+	Iteration number: 101
+	Sum squared error: 0.00162626485534
+	Iteration number: 102
+	Sum squared error: 0.00160809622198
+	Iteration number: 103
+	Sum squared error: 0.00159062129332
+	Iteration number: 104
+	Sum squared error: 0.00157380480816
+	Iteration number: 105
+	Sum squared error: 0.00155761338539
+	Iteration number: 106
+	Sum squared error: 0.00154201542279
+	Iteration number: 107
+	Sum squared error: 0.00152698100132
+	Iteration number: 108
+	Sum squared error: 0.00151248179458
+	Iteration number: 109
+	Sum squared error: 0.00149849098317
+	Iteration number: 110
+	Sum squared error: 0.00148498317359
+	Iteration number: 111
+	Sum squared error: 0.00147193432162
+	Iteration number: 112
+	Sum squared error: 0.00145932165977
+	Iteration number: 113
+	Sum squared error: 0.00144712362865
+	Iteration number: 114
+	Sum squared error: 0.00143531981204
+	Iteration number: 115
+	Sum squared error: 0.00142389087551
+	Iteration number: 116
+	Sum squared error: 0.00141281850826
+	Iteration number: 117
+	Sum squared error: 0.00140208536817
+	Iteration number: 118
+	Sum squared error: 0.00139167502978
+	Iteration number: 119
+	Sum squared error: 0.00138157193509
+	Iteration number: 120
+	Sum squared error: 0.00137176134697
+	Iteration number: 121
+	Sum squared error: 0.00136222930517
+	Iteration number: 122
+	Sum squared error: 0.0013529625846
+	Iteration number: 123
+	Sum squared error: 0.0013439486559
+	Iteration number: 124
+	Sum squared error: 0.00133517564816
+	Iteration number: 125
+	Sum squared error: 0.00132663231361
+	Iteration number: 126
+	Sum squared error: 0.00131830799423
+	Iteration number: 127
+	Sum squared error: 0.00131019259015
+	Iteration number: 128
+	Sum squared error: 0.00130227652976
+	Iteration number: 129
+	Sum squared error: 0.00129455074142
+	Iteration number: 130
+	Sum squared error: 0.0012870066267
+	Iteration number: 131
+	Sum squared error: 0.00127963603507
+	Iteration number: 132
+	Sum squared error: 0.00127243123993
+	Iteration number: 133
+	Sum squared error: 0.00126538491592
+	Iteration number: 134
+	Sum squared error: 0.00125849011753
+	Iteration number: 135
+	Sum squared error: 0.00125174025874
+	Iteration number: 136
+	Sum squared error: 0.00124512909386
+	Iteration number: 137
+	Sum squared error: 0.00123865069934
+	Iteration number: 138
+	Sum squared error: 0.00123229945656
+	Iteration number: 139
+	Sum squared error: 0.00122607003563
+	Iteration number: 140
+	Sum squared error: 0.0012199573799
+	Iteration number: 141
+	Sum squared error: 0.00121395669146
+	Iteration number: 142
+	Sum squared error: 0.00120806341736
+	Iteration number: 143
+	Sum squared error: 0.0012022732365
+	Iteration number: 144
+	Sum squared error: 0.00119658204737
+	Iteration number: 145
+	Sum squared error: 0.00119098595631
+	Iteration number: 146
+	Sum squared error: 0.0011854812665
+	Iteration number: 147
+	Sum squared error: 0.00118006446747
+	Iteration number: 148
+	Sum squared error: 0.00117473222523
+	Iteration number: 149
+	Sum squared error: 0.00116948137287
+	Iteration number: 150
+	Sum squared error: 0.00116430890175
+	Iteration number: 151
+	Sum squared error: 0.00115921195304
+	Iteration number: 152
+	Sum squared error: 0.00115418780987
+	Iteration number: 153
+	Sum squared error: 0.00114923388974
+	Iteration number: 154
+	Sum squared error: 0.00114434773745
+	Iteration number: 155
+	Sum squared error: 0.00113952701837
+	Iteration number: 156
+	Sum squared error: 0.00113476951209
+	Iteration number: 157
+	Sum squared error: 0.00113007310633
+	Iteration number: 158
+	Sum squared error: 0.00112543579132
+	Iteration number: 159
+	Sum squared error: 0.00112085565434
+	Iteration number: 160
+	Sum squared error: 0.00111633087466
+	Iteration number: 161
+	Sum squared error: 0.00111185971866
+	Iteration number: 162
+	Sum squared error: 0.00110744053528
+	Iteration number: 163
+	Sum squared error: 0.00110307175168
+	Iteration number: 164
+	Sum squared error: 0.00109875186917
+	Iteration number: 165
+	Sum squared error: 0.00109447945928
+	Iteration number: 166
+	Sum squared error: 0.00109025316011
+	Iteration number: 167
+	Sum squared error: 0.00108607167287
+	Iteration number: 168
+	Sum squared error: 0.00108193375857
+	Iteration number: 169
+	Sum squared error: 0.00107783823491
+	Iteration number: 170
+	Sum squared error: 0.00107378397332
+	Iteration number: 171
+	Sum squared error: 0.00106976989621
+	Iteration number: 172
+	Sum squared error: 0.00106579497426
+	Iteration number: 173
+	Sum squared error: 0.00106185822399
+	Iteration number: 174
+	Sum squared error: 0.00105795870534
+	Iteration number: 175
+	Sum squared error: 0.00105409551945
+	Iteration number: 176
+	Sum squared error: 0.00105026780655
+	Iteration number: 177
+	Sum squared error: 0.00104647474392
+	Iteration number: 178
+	Sum squared error: 0.001042715544
+	Iteration number: 179
+	Sum squared error: 0.00103898945261
+	Iteration number: 180
+	Sum squared error: 0.00103529574721
+	Iteration number: 181
+	Sum squared error: 0.00103163373532
+	Iteration number: 182
+	Sum squared error: 0.00102800275296
+	Iteration number: 183
+	Sum squared error: 0.00102440216321
+	Iteration number: 184
+	Sum squared error: 0.00102083135488
+	Iteration number: 185
+	Sum squared error: 0.00101728974113
+	Iteration number: 186
+	Sum squared error: 0.00101377675833
+	Iteration number: 187
+	Sum squared error: 0.00101029186481
+	Iteration number: 188
+	Sum squared error: 0.00100683453985
+	Iteration number: 189
+	Sum squared error: 0.00100340428254
+	Iteration number: 190
+	Sum squared error: 0.00100000061088
+	Iteration number: 191
+	Sum squared error: 0.000996623060773
+	Iteration number: 192
+	Sum squared error: 0.000993271185171
+	Iteration number: 193
+	Sum squared error: 0.000989944553235
+	Iteration number: 194
+	Sum squared error: 0.000986642749531
+	Iteration number: 195
+	Sum squared error: 0.000983365373278
+	Iteration number: 196
+	Sum squared error: 0.000980112037634
+	Iteration number: 197
+	Sum squared error: 0.000976882369016
+	Iteration number: 198
+	Sum squared error: 0.000973676006466
+	Iteration number: 199
+	Sum squared error: 0.000970492601035
+	Iteration number: 200
+	Sum squared error: 0.000967331815212
+	Final a: [[-0.00580778 -0.02426691  0.06442426 -0.00964629  0.07091757  0.02086783
+	  -0.00154428  0.01506374  0.11990318  0.01342272]]
+	Final sum squared error: 0.000964193322377
+
+Nonlinear fitting with data scaling:
+	Data scaling factor for each column are division by:
+	100, 100000, 100, 10000 respectively
+
+	Step length: 5.739
+	Initial a: [ 1.  1.  1.]
+	Iteration number: 1
+	Sum squared error: 1.97673343264
+	Iteration number: 2
+	Sum squared error: 0.00660576251335
+	Iteration number: 3
+	Sum squared error: 0.00659306049708
+	Iteration number: 4
+	Sum squared error: 0.0065805859323
+	Iteration number: 5
+	Sum squared error: 0.00656833322462
+	Iteration number: 6
+	Sum squared error: 0.00655629695656
+	Iteration number: 7
+	Sum squared error: 0.0065444718807
+	Iteration number: 8
+	Sum squared error: 0.00653285291301
+	Iteration number: 9
+	Sum squared error: 0.00652143512657
+	Iteration number: 10
+	Sum squared error: 0.00651021374557
+	Iteration number: 11
+	Sum squared error: 0.00649918413958
+	Iteration number: 12
+	Sum squared error: 0.00648834181805
+	Iteration number: 13
+	Sum squared error: 0.00647768242514
+	Iteration number: 14
+	Sum squared error: 0.00646720173465
+	Iteration number: 15
+	Sum squared error: 0.00645689564534
+	Iteration number: 16
+	Sum squared error: 0.00644676017629
+	Iteration number: 17
+	Sum squared error: 0.00643679146257
+	Iteration number: 18
+	Sum squared error: 0.00642698575107
+	Iteration number: 19
+	Sum squared error: 0.00641733939653
+	Iteration number: 20
+	Sum squared error: 0.00640784885764
+	Iteration number: 21
+	Sum squared error: 0.00639851069349
+	Iteration number: 22
+	Sum squared error: 0.00638932155996
+	Iteration number: 23
+	Sum squared error: 0.00638027820643
+	Iteration number: 24
+	Sum squared error: 0.00637137747251
+	Iteration number: 25
+	Sum squared error: 0.006362616285
+	Iteration number: 26
+	Sum squared error: 0.00635399165488
+	Iteration number: 27
+	Sum squared error: 0.00634550067453
+	Iteration number: 28
+	Sum squared error: 0.00633714051491
+	Iteration number: 29
+	Sum squared error: 0.00632890842305
+	Iteration number: 30
+	Sum squared error: 0.00632080171946
+	Iteration number: 31
+	Sum squared error: 0.00631281779573
+	Iteration number: 32
+	Sum squared error: 0.00630495411223
+	Iteration number: 33
+	Sum squared error: 0.00629720819588
+	Iteration number: 34
+	Sum squared error: 0.00628957763798
+	Iteration number: 35
+	Sum squared error: 0.00628206009217
+	Iteration number: 36
+	Sum squared error: 0.00627465327245
+	Iteration number: 37
+	Sum squared error: 0.00626735495126
+	Iteration number: 38
+	Sum squared error: 0.00626016295766
+	Iteration number: 39
+	Sum squared error: 0.00625307517555
+	Iteration number: 40
+	Sum squared error: 0.00624608954198
+	Iteration number: 41
+	Sum squared error: 0.0062392040455
+	Iteration number: 42
+	Sum squared error: 0.0062324167246
+	Iteration number: 43
+	Sum squared error: 0.00622572566617
+	Iteration number: 44
+	Sum squared error: 0.00621912900407
+	Iteration number: 45
+	Sum squared error: 0.00621262491766
+	Iteration number: 46
+	Sum squared error: 0.0062062116305
+	Iteration number: 47
+	Sum squared error: 0.006199887409
+	Iteration number: 48
+	Sum squared error: 0.00619365056117
+	Iteration number: 49
+	Sum squared error: 0.00618749943537
+	Iteration number: 50
+	Sum squared error: 0.0061814324192
+	Iteration number: 51
+	Sum squared error: 0.00617544793826
+	Iteration number: 52
+	Sum squared error: 0.00616954445515
+	Iteration number: 53
+	Sum squared error: 0.00616372046835
+	Iteration number: 54
+	Sum squared error: 0.00615797451122
+	Iteration number: 55
+	Sum squared error: 0.00615230515098
+	Iteration number: 56
+	Sum squared error: 0.00614671098781
+	Iteration number: 57
+	Sum squared error: 0.00614119065386
+	Iteration number: 58
+	Sum squared error: 0.00613574281241
+	Iteration number: 59
+	Sum squared error: 0.00613036615698
+	Iteration number: 60
+	Sum squared error: 0.0061250594105
+	Iteration number: 61
+	Sum squared error: 0.0061198213245
+	Iteration number: 62
+	Sum squared error: 0.00611465067832
+	Iteration number: 63
+	Sum squared error: 0.00610954627839
+	Iteration number: 64
+	Sum squared error: 0.00610450695746
+	Iteration number: 65
+	Sum squared error: 0.00609953157391
+	Iteration number: 66
+	Sum squared error: 0.00609461901105
+	Iteration number: 67
+	Sum squared error: 0.00608976817648
+	Iteration number: 68
+	Sum squared error: 0.00608497800144
+	Iteration number: 69
+	Sum squared error: 0.00608024744015
+	Iteration number: 70
+	Sum squared error: 0.00607557546929
+	Iteration number: 71
+	Sum squared error: 0.00607096108731
+	Iteration number: 72
+	Sum squared error: 0.00606640331396
+	Iteration number: 73
+	Sum squared error: 0.00606190118969
+	Iteration number: 74
+	Sum squared error: 0.00605745377512
+	Iteration number: 75
+	Sum squared error: 0.00605306015055
+	Iteration number: 76
+	Sum squared error: 0.00604871941542
+	Iteration number: 77
+	Sum squared error: 0.00604443068786
+	Iteration number: 78
+	Sum squared error: 0.00604019310423
+	Iteration number: 79
+	Sum squared error: 0.00603600581861
+	Iteration number: 80
+	Sum squared error: 0.0060318680024
+	Iteration number: 81
+	Sum squared error: 0.00602777884389
+	Iteration number: 82
+	Sum squared error: 0.00602373754782
+	Iteration number: 83
+	Sum squared error: 0.006019743335
+	Iteration number: 84
+	Sum squared error: 0.00601579544189
+	Iteration number: 85
+	Sum squared error: 0.00601189312026
+	Iteration number: 86
+	Sum squared error: 0.00600803563676
+	Iteration number: 87
+	Sum squared error: 0.00600422227262
+	Iteration number: 88
+	Sum squared error: 0.00600045232326
+	Iteration number: 89
+	Sum squared error: 0.00599672509798
+	Iteration number: 90
+	Sum squared error: 0.0059930399196
+	Iteration number: 91
+	Sum squared error: 0.00598939612415
+	Iteration number: 92
+	Sum squared error: 0.00598579306058
+	Iteration number: 93
+	Sum squared error: 0.00598223009044
+	Iteration number: 94
+	Sum squared error: 0.00597870658755
+	Iteration number: 95
+	Sum squared error: 0.00597522193779
+	Iteration number: 96
+	Sum squared error: 0.00597177553876
+	Iteration number: 97
+	Sum squared error: 0.00596836679953
+	Iteration number: 98
+	Sum squared error: 0.00596499514039
+	Iteration number: 99
+	Sum squared error: 0.00596165999255
+	Iteration number: 100
+	Sum squared error: 0.00595836079795
+	Iteration number: 101
+	Sum squared error: 0.00595509700896
+	Iteration number: 102
+	Sum squared error: 0.00595186808821
+	Iteration number: 103
+	Sum squared error: 0.00594867350827
+	Iteration number: 104
+	Sum squared error: 0.00594551275152
+	Iteration number: 105
+	Sum squared error: 0.00594238530988
+	Iteration number: 106
+	Sum squared error: 0.00593929068458
+	Iteration number: 107
+	Sum squared error: 0.00593622838603
+	Iteration number: 108
+	Sum squared error: 0.00593319793352
+	Iteration number: 109
+	Sum squared error: 0.00593019885512
+	Iteration number: 110
+	Sum squared error: 0.0059272306874
+	Iteration number: 111
+	Sum squared error: 0.00592429297533
+	Iteration number: 112
+	Sum squared error: 0.00592138527202
+	Iteration number: 113
+	Sum squared error: 0.00591850713861
+	Iteration number: 114
+	Sum squared error: 0.00591565814404
+	Iteration number: 115
+	Sum squared error: 0.00591283786493
+	Iteration number: 116
+	Sum squared error: 0.0059100458854
+	Iteration number: 117
+	Sum squared error: 0.00590728179689
+	Iteration number: 118
+	Sum squared error: 0.00590454519803
+	Iteration number: 119
+	Sum squared error: 0.0059018356945
+	Iteration number: 120
+	Sum squared error: 0.00589915289883
+	Iteration number: 121
+	Sum squared error: 0.00589649643032
+	Iteration number: 122
+	Sum squared error: 0.00589386591485
+	Iteration number: 123
+	Sum squared error: 0.00589126098478
+	Iteration number: 124
+	Sum squared error: 0.00588868127877
+	Iteration number: 125
+	Sum squared error: 0.00588612644172
+	Iteration number: 126
+	Sum squared error: 0.00588359612455
+	Iteration number: 127
+	Sum squared error: 0.00588108998418
+	Iteration number: 128
+	Sum squared error: 0.00587860768332
+	Iteration number: 129
+	Sum squared error: 0.00587614889039
+	Iteration number: 130
+	Sum squared error: 0.00587371327943
+	Iteration number: 131
+	Sum squared error: 0.00587130052993
+	Iteration number: 132
+	Sum squared error: 0.00586891032676
+	Iteration number: 133
+	Sum squared error: 0.00586654236005
+	Iteration number: 134
+	Sum squared error: 0.0058641963251
+	Iteration number: 135
+	Sum squared error: 0.00586187192225
+	Iteration number: 136
+	Sum squared error: 0.00585956885679
+	Iteration number: 137
+	Sum squared error: 0.0058572868389
+	Iteration number: 138
+	Sum squared error: 0.00585502558349
+	Iteration number: 139
+	Sum squared error: 0.00585278481015
+	Iteration number: 140
+	Sum squared error: 0.00585056424304
+	Iteration number: 141
+	Sum squared error: 0.00584836361082
+	Iteration number: 142
+	Sum squared error: 0.00584618264654
+	Iteration number: 143
+	Sum squared error: 0.00584402108759
+	Iteration number: 144
+	Sum squared error: 0.00584187867557
+	Iteration number: 145
+	Sum squared error: 0.00583975515624
+	Iteration number: 146
+	Sum squared error: 0.00583765027943
+	Iteration number: 147
+	Sum squared error: 0.00583556379898
+	Iteration number: 148
+	Sum squared error: 0.00583349547263
+	Iteration number: 149
+	Sum squared error: 0.00583144506198
+	Iteration number: 150
+	Sum squared error: 0.0058294123324
+	Iteration number: 151
+	Sum squared error: 0.00582739705296
+	Iteration number: 152
+	Sum squared error: 0.00582539899636
+	Iteration number: 153
+	Sum squared error: 0.00582341793888
+	Iteration number: 154
+	Sum squared error: 0.00582145366029
+	Iteration number: 155
+	Sum squared error: 0.00581950594378
+	Iteration number: 156
+	Sum squared error: 0.00581757457594
+	Iteration number: 157
+	Sum squared error: 0.00581565934664
+	Iteration number: 158
+	Sum squared error: 0.00581376004902
+	Iteration number: 159
+	Sum squared error: 0.00581187647939
+	Iteration number: 160
+	Sum squared error: 0.00581000843721
+	Iteration number: 161
+	Sum squared error: 0.005808155725
+	Iteration number: 162
+	Sum squared error: 0.00580631814829
+	Iteration number: 163
+	Sum squared error: 0.0058044955156
+	Iteration number: 164
+	Sum squared error: 0.00580268763834
+	Iteration number: 165
+	Sum squared error: 0.00580089433077
+	Iteration number: 166
+	Sum squared error: 0.00579911540998
+	Iteration number: 167
+	Sum squared error: 0.0057973506958
+	Iteration number: 168
+	Sum squared error: 0.00579560001078
+	Iteration number: 169
+	Sum squared error: 0.00579386318011
+	Iteration number: 170
+	Sum squared error: 0.0057921400316
+	Iteration number: 171
+	Sum squared error: 0.00579043039564
+	Iteration number: 172
+	Sum squared error: 0.00578873410513
+	Iteration number: 173
+	Sum squared error: 0.00578705099544
+	Iteration number: 174
+	Sum squared error: 0.00578538090439
+	Iteration number: 175
+	Sum squared error: 0.00578372367218
+	Iteration number: 176
+	Sum squared error: 0.00578207914136
+	Iteration number: 177
+	Sum squared error: 0.00578044715679
+	Iteration number: 178
+	Sum squared error: 0.00577882756561
+	Iteration number: 179
+	Sum squared error: 0.00577722021718
+	Iteration number: 180
+	Sum squared error: 0.00577562496305
+	Iteration number: 181
+	Sum squared error: 0.00577404165693
+	Iteration number: 182
+	Sum squared error: 0.00577247015465
+	Iteration number: 183
+	Sum squared error: 0.00577091031411
+	Iteration number: 184
+	Sum squared error: 0.00576936199526
+	Iteration number: 185
+	Sum squared error: 0.00576782506009
+	Iteration number: 186
+	Sum squared error: 0.00576629937252
+	Iteration number: 187
+	Sum squared error: 0.00576478479845
+	Iteration number: 188
+	Sum squared error: 0.00576328120568
+	Iteration number: 189
+	Sum squared error: 0.00576178846389
+	Iteration number: 190
+	Sum squared error: 0.00576030644461
+	Iteration number: 191
+	Sum squared error: 0.00575883502118
+	Iteration number: 192
+	Sum squared error: 0.00575737406876
+	Iteration number: 193
+	Sum squared error: 0.00575592346422
+	Iteration number: 194
+	Sum squared error: 0.00575448308619
+	Iteration number: 195
+	Sum squared error: 0.005753052815
+	Iteration number: 196
+	Sum squared error: 0.00575163253265
+	Iteration number: 197
+	Sum squared error: 0.00575022212277
+	Iteration number: 198
+	Sum squared error: 0.00574882147064
+	Iteration number: 199
+	Sum squared error: 0.0057474304631
+	Iteration number: 200
+	Sum squared error: 0.00574604898858
+	Final a: [  5.10168308  12.65322303   5.6920248 ]
+	Final sum squared error: 0.00574467693703
+
+	Explanation: Quadratic fitting has more degree of freedom and includes a constant term which is not related to the inputs.
+	Whereas the nonlinear fitting have only 3 variables, and no constant term.
