@@ -26,20 +26,19 @@ def bestSimilarityTransform(source, target):
 	'''
 	calculate the coefficients
 	c = [s * cos,
-		-sin,
+		s * -sin,
 		t1,
 		t2]
 	'''
 	c = np.linalg.pinv(source_mat).dot(target)
-
-	n_sin = c[1, 0]
-	cos = np.sqrt(1 - n_sin * n_sin)
-	s = c[0, 0] / cos
+	s_cos = c[0, 0]
+	s_nsin = c[1, 0]
+	s = s_cos**2 + s_nsin**2
 
 	R = np.mat([
-		[cos, n_sin],
-		[-n_sin, cos]
-		])
+		[s_cos, s_nsin],
+		[-s_nsin, s_cos]
+		]) / s
 	T = np.mat([[c[2, 0]], [c[3, 0]]])
 
 	return s, R, T
