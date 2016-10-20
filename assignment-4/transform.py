@@ -51,7 +51,7 @@ source = data[:, 0:2].T
 target = data[:, 2:4].T
 
 # Part 2 Step 3, 4
-def transformPoints(p, s, R, T):
+def transformPoint(p, s, R, T):
 	return s * R * p + T
 
 def calculate_mean_squared_error(source, target, s, R, T):
@@ -59,7 +59,7 @@ def calculate_mean_squared_error(source, target, s, R, T):
 	n_points = source.shape[1]
 	for i in range(n_points):
 		u = np.mat(source[:, i]).T
-		vp = transformPoints(u, s, R, T)
+		vp = transformPoint(u, s, R, T)
 		diff = vp - np.mat(target[:, i]).T
 		total += diff.T * diff
 	D = total / n_points
@@ -90,3 +90,84 @@ print 'T1 + s1 * R1 * T2 ='
 print T1 + s1 * R1 * T2
 print 'T2 + s2 * R2 * T1 ='
 print T2 + s2 * R2 * T1
+
+# Part 3 Step 3
+from scipy import misc
+source_image = misc.imread('source.jpg')
+
+def inverseTransformPoint(q, s, R, T):
+	return np.linalg.inv(R) * (q - T) / s
+
+# Part 3 Step 4
+def truncateTransform(source, s, R, T):
+	h, w, _ = source.shape
+
+	# calculate the size of the result image
+	c1 = transformPoint(np.mat([[0], [0]]), s, R, T)
+	c2 = transformPoint(np.mat([[w-1], [0]]), s, R, T)
+	c3 = transformPoint(np.mat([[w-1], [h-1]]), s, R, T)
+	c4 = transformPoint(np.mat([[0], [h-1]]), s, R, T)
+	max_0 = max(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	max_1 = max(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	min_0 = min(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	min_1 = min(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	
+	result_w = int(round(max_0 - min_0)) + 1
+	result_h = int(round(max_1 - min_1)) + 1
+
+	# extra translation to make sure the whole transformed image is within the picture
+	extra_T = np.mat([[-min_0], [-min_1]])
+
+	result = np.zeros((result_h, result_w, 3))
+	for index in np.ndindex(result_w, result_h):
+		# Compute the corresponding coordinates in the source image
+		p = inverseTransformPoint(np.mat([result_w - 1 - index[0], result_h - 1 - index[1]]).T - extra_T, s, R, T)
+		# Truncate real-number coordinates to integer number
+		u1 = w - 1 - int(p[0, 0])
+		u2 = h - 1 - int(p[1, 0])
+		# if u not in the source image, just ignore
+		if u1 >= w or u2 >= h or u1 < 0 or u2 < 0:
+			continue
+		result[index[1], index[0]] = source[u2, u1]
+	return result
+
+# Part 3 Step 5
+# result_t = truncateTransform(source_image, s1, R1, T1)
+# misc.imsave('result-t.jpg', result_t)
+
+# Part 3 Step 6
+def roundTransform(source, s, R, T):
+	h, w, _ = source.shape
+
+	# calculate the size of the result image
+	c1 = transformPoint(np.mat([[0], [0]]), s, R, T)
+	c2 = transformPoint(np.mat([[w-1], [0]]), s, R, T)
+	c3 = transformPoint(np.mat([[w-1], [h-1]]), s, R, T)
+	c4 = transformPoint(np.mat([[0], [h-1]]), s, R, T)
+	max_0 = max(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	max_1 = max(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	min_0 = min(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	min_1 = min(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	
+	result_w = int(round(max_0 - min_0)) + 1
+	result_h = int(round(max_1 - min_1)) + 1
+
+	# extra translation to make sure the whole transformed image is within the picture
+	extra_T = np.mat([[-min_0], [-min_1]])
+
+	result = np.zeros((result_h, result_w, 3))
+	for index in np.ndindex(result_w, result_h):
+		# Compute the corresponding coordinates in the source image
+		p = inverseTransformPoint(np.mat([result_w - 1 - index[0], result_h - 1 - index[1]]).T - extra_T, s, R, T)
+		# round real-number coordinates to integer number
+		u1 = w - 1 - int(round(p[0, 0]))
+		u2 = h - 1 - int(round(p[1, 0]))
+		# if u not in the source image, just ignore
+		if u1 >= w or u2 >= h or u1 < 0 or u2 < 0:
+			continue
+		result[index[1], index[0]] = source[u2, u1]
+	return result
+
+# Part 3 Step 7
+# result_r = roundTransform(source_image, s1, R1, T1)
+# misc.imsave('result-r.jpg', result_r)
