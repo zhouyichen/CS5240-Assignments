@@ -171,3 +171,55 @@ def roundTransform(source, s, R, T):
 # Part 3 Step 7
 # result_r = roundTransform(source_image, s1, R1, T1)
 # misc.imsave('result-r.jpg', result_r)
+
+# Part 4 Step 2
+def bilinearTransform(source, s, R, T):
+	h, w, _ = source.shape
+
+	# calculate the size of the result image
+	c1 = transformPoint(np.mat([[0], [0]]), s, R, T)
+	c2 = transformPoint(np.mat([[w-1], [0]]), s, R, T)
+	c3 = transformPoint(np.mat([[w-1], [h-1]]), s, R, T)
+	c4 = transformPoint(np.mat([[0], [h-1]]), s, R, T)
+	max_0 = max(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	max_1 = max(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	min_0 = min(c1[0, 0], c2[0, 0], c3[0, 0], c4[0, 0])
+	min_1 = min(c1[1, 0], c2[1, 0], c3[1, 0], c4[1, 0])
+	
+	result_w = int(round(max_0 - min_0)) + 1
+	result_h = int(round(max_1 - min_1)) + 1
+
+	# extra translation to make sure the whole transformed image is within the picture
+	extra_T = np.mat([[-min_0], [-min_1]])
+
+	result = np.zeros((result_h, result_w, 3))
+	for index in np.ndindex(result_w, result_h):
+		# Compute the corresponding coordinates in the source image
+		p = inverseTransformPoint(np.mat([result_w - 1 - index[0], result_h - 1 - index[1]]).T - extra_T, s, R, T)
+		# round real-number coordinates to integer number
+		x1 = w - 1 - int(p[0, 0])
+		y1 = h - 1 - int(p[1, 0])
+		x2 = w - 1 - int(p[0, 0] + 1)
+		y2 = h - 1 - int(p[1, 0] + 1)
+
+		# if u not in the source image, just ignore
+		if x1 >= w or y1 >= h or x2 < 0 or y2 < 0:
+			continue
+
+		# bilinear interpolation
+		x = w - 1 - p[0, 0]
+		y = h - 1 - p[1, 0]
+		xt = x - x2
+		yt = y - y2
+		c1 = xt * source[y1, x1] + (1 - xt) * source[y1, x2]
+		c2 = xt * source[y2, x1] + (1 - xt) * source[y2, x2]
+		c3 = yt * c1 + (1 - yt) * c2
+
+		result[index[1], index[0]] = c3
+	return result
+
+# Part 4 Step 3
+# result_b = bilinearTransform(source_image, s1, R1, T1)
+# misc.imsave('result-b.jpg', result_b)
+
+
