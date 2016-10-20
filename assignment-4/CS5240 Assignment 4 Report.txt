@@ -1,0 +1,49 @@
+CS5240 Assignment 4 Report
+Zhou Yichen 
+A0113598X
+
+Part 2 Step 3:
+	s1: 0.898268513885
+	R1:
+	[[ 0.9879497  -0.15477531]
+	 [ 0.15477531  0.9879497 ]]
+	T1:
+	[[ 53.51794006]
+	 [  0.09029116]]
+Part 2 Step 4:
+	Mean squared error: 39.9001956997
+
+Part 2 Step 5
+	s2: 1.11401580313
+	R2:
+	[[ 0.98164365  0.19072424]
+	 [-0.19072424  0.98164365]]
+	T2:
+	[[-58.5423006]
+	 [ 10.1086764]]
+	Mean squared error: 72.8267594192
+
+
+Part 2 Step 6:
+Expected:
+	s1 * s2 = 1
+	R1 * R2 = I
+	T1 + s1 * R1 * T2 = 0
+	T2 + s2 * R2 * T1 = 0
+Real Output:
+	s1 * s2 = 1.00068531992
+	R1 * R2 =
+	[[ 0.99933395  0.03649175]
+	 [-0.03649175  0.99933395]]
+	T1 + s1 * R1 * T2 =
+	[[ 0.15951331]
+	 [ 0.92205285]]
+	T2 + s2 * R2 * T1 =
+	[[ 0.00231234]
+	 [-1.16353101]]
+
+
+differences between result-t.jpg, result-r.jpg and result-b.jpg:
+	The result-b.jpg looks a lot smoother than result-t.jpg and result-r.jpg
+	There seems to be less noise in result-b.jpg
+
